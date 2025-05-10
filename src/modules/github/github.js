@@ -41,11 +41,11 @@ const GitHub = ({ repos, loading, error, filter, fetchRepos, setFilter }) => {
     );
 };
 
-const mapStatetoProps = (state) => ({
-    repos: state.repos,
-    loading: state.loading,
-    error: state.error,
-    filter: state.filter,
+const mapStateToProps = (state) => ({
+    repos: state.github.repos,
+    loading: state.github.loading,
+    error: state.github.error,
+    filter: state.github.filter,
 });
 
 const mapDispatchToProps ={
@@ -53,4 +53,4 @@ const mapDispatchToProps ={
     setFilter,
 };
 
-export default connect(mapStatetoProps, mapDispatchToProps)(GitHub);
+export default connect(mapStateToProps, mapDispatchToProps)(GitHub);
